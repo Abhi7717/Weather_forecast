@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+    body{
+        margin:0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh; 
+        justify-content: center;
+        background-image: url(/white-cloud-blue-sky.jpg);
+        background-position: center;
+        /* background-repeat: no-repeat; */
+        /*background-size: cover;*/
+        overflow: hidden;
+    }
+    h1 , h3{
+        color: rgb(18, 10, 138);
+        animation-duration: 2s;
+        animation-name: slidein;
+    }
+    @keyframes slidein{
+    from {
+        margin-left: 50%;
+    }
+    to{
+        margin-left: 0%;
+    }
+    }
+    .button{
+        
+            transition-duration: 0.4s;
+            padding: 3px 12px;
+            position: relative;
+            left: 170%;
+            bottom: 25%;
+          }
+          
+         .button:hover {
+            background-color: #141a91; /* Green */
+            color: white;
+
+          }
+          #cityInput{
+            position: relative;
+            left: 60%;
+          }
+    
+</style>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body >
+    <h1><u>WEATHER APP</u></h1>
+    <form id="weatherform" action="/" method="post">
+    <label for="cityInput"><h3>City Name : </h3></label>
+    <input id="cityInput" type="text" name="cityName">
+    <br>
+    <button class="button" type="submit" >SUBMIT</button>
+</form>
+<script src="app.js"></script>
+</body>
+</html>
